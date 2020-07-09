@@ -33,19 +33,18 @@
 }
 
 .menu ul {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 40px;
-    background: rgb(0, 136, 169, 0.8);
-    
-
+    display: inline-flex;
+    margin: 50px;
+    padding-left: 75px; 
+    float: right;
+  
 }
 
 .menu ul li {
     list-style: none;
+    float:right;
+    margin: 0 20px;
+    color: #ffffff;
     cursor: pointer;
     font-size: 18px;
     line-height: 40px;
@@ -60,86 +59,59 @@
 }
 
 .ul__links li a:hover {
-    /* color: #0088a9;      */
-    color:lightblue;
-    text-decoration: underline;
+    color: #0088a9;     
 }
 
-/* nav dropdown menus */
-
-.dropnav {
-    position: relative;
-    display: inline-block;
-
+a.active, a:hover{
+    transition: .5s;
+    color: #0088a9;
 }
 
-.dropcontent {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    padding: 20px;
-    z-index: 1;
-
-}
-
-.dropnav:hover .dropcontent {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
+.page-name ul {
+    display: inline-flex, right;
+    margin: 50px;
 }
 
 
-.dropcontent a {
-    color: rgb(0, 136, 169, 0.8);
-    padding: 20px;
-}
 
-.drop {
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
+.page-name ul li {
+    list-style: none;
+    float: left;
+    margin: 0 20px;
 
-.drop:hover a {
-    background-color: lightblue;
-    width: 100%;
+    
     
 }
 
-
-/* page name*/
-
-.pagename ul li {
-    list-style: none;
-    float: left;
-    color: #ffffff;
-    cursor: pointer;
+.logo img {
+    align-items: flex-start;
+    margin-right: 120px;
 }
-
-
-.name{
+.name {
     display: inline;
-
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .banner{
     color: #ffffff;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-flex;
     justify-content: center;
+    align-items: flex-start;
+}
 
+
+.picture {
+    display: flex;
+    width: 100%;
+    margin-top: -100px;
+    margin-left: 350px;
 }
 
 .text {
-margin-top: 20px;
-text-align: center;
-display: flex;
-justify-items: center;
-align-items: center;
-flex-direction: column;
+margin-top: 60px;
+margin-left: 150px;
 }
 
 .text h1 {
@@ -157,6 +129,7 @@ flex-direction: column;
 
 
 .subscribe-btn {
+    position: absolute;
     text-decoration: none;
     color: #ffffff;
     border: 2px solid transparent;
@@ -176,6 +149,7 @@ flex-direction: column;
 }
 
 .subscribe-btn {
+    margin-right: 50px;
     transition: all 0.3s ease 0s;
 }
 
@@ -186,14 +160,6 @@ flex-direction: column;
 .subscribe-btn span {
     display: block;
     padding: 10px 22px;
-
-
-.picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
 
 }
 
@@ -220,6 +186,7 @@ flex-direction: column;
     /* background: rgba(255, 254, 254, 0.685);
     color: black; */
     background: rgba(0, 0, 1, 0.5);
+    color: white;
     width: 100%;
     font-size: 50px;
     display: flex;
@@ -230,21 +197,14 @@ flex-direction: column;
     border-width: 5px;
 }
 
-
-.cities a {
-    color: white;
-}
-.cities a:hover {
-    text-decoration: underline;
-
+.cities h2:hover {
+    text-decoration: none;
     color: #0088a9;
-    
 }
 
 .cities img {
     padding: 20px;
 }
-
 
 /*london*/
 .londonhome {
@@ -269,18 +229,14 @@ flex-direction: column;
 }
 /* Oslo */
  
-
-.berlinhome {
-
+.oslohome {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center
 }
  
-
-.berlinhome > h2 {
-
+.oslohome > h2 {
     position: absolute;
     display: flex;
     align-items: center;
@@ -352,21 +308,23 @@ flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+/* text decoration none for "a" */
+.amhome h2 a {
+    text-decoration: none;
+    color: #ffffff;
 
-
-/* oslo */
+}
  
-.oslohome {
-
+/* Berlin*/
+ 
+.berlinhome {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center
 }
  
-
-.oslohome > h2 {
-
+.berlinhome > h2 {
     position: absolute;
     display: flex;
     align-items: center;
@@ -403,37 +361,5 @@ flex-direction: column;
     margin-top: 30px;
     margin-left: 200px;
     cursor: pointer;
-}
-
-
-/* footer */
-
-.footerlinks {
-    background-color: rgba(0, 136, 169, 0.8);
-    font-size: 15px;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 10px;
-
-}
-
-.foot a {
-    color: white;
-}
-.foot:hover a {
-    color: lightblue; 
-}
-
-
-.social {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
 }
 
